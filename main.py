@@ -144,7 +144,7 @@ class PVZAutomationGUI:
                 print("Starting Slot Machine Minigame Automation...")
                 try:
                     SelGui.click(r'assets/main_menu/minigames.png', 0.9, timeout=20)
-                    slot_machine_CHILD.slot_machine(win_count)
+                    slot_machine.slot_machine(win_count)
                     print(f"Completed Slot Machine Automation with {win_count} wins.")
                 except Exception as e:
                     print(f"Error in Slot Machine Automation: {e}")
@@ -156,7 +156,7 @@ class PVZAutomationGUI:
                     SelGui.click(r'assets/main_menu/zen_garden_icon.png', 0.9, timeout=20)
                     extended_time_seconds = zen_garden_hours * 3600
                     print(f"Total AFK time in Zen Garden: {zen_garden_hours} hours ({extended_time_seconds} seconds)")
-                    extended_zen_garden_CHILD.zen_garden(extended_time_seconds)
+                    extended_zen_garden.zen_garden(extended_time_seconds)
                     print("Completed Extended Zen Garden AFK Automation.")
                 except Exception as e:
                     print(f"Error in Extended Zen Garden Automation: {e}")
@@ -174,7 +174,7 @@ class PVZAutomationGUI:
                             break
                         except:
                             SelGui.click(r'assets/main_menu/golden_arrow.png',.9)
-                    wisdom_tree_CHILD.main()
+                    wisdom_tree.main()
                     print("Completed Wisdom Tree Automation.")
                 except Exception as e:
                     print(f"Error in Wisdom Tree Automation: {e}")
